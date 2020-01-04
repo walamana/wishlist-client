@@ -1,0 +1,42 @@
+
+<h1>Wishlist</h1>
+<span class="subtitle">Friendly spotify party manager</span>
+
+<div class="steps">
+
+  <div class="options step" [class.visible]="setupStep == 0">
+      <div class="option" (click)="setProvider('TICKET')">
+        <img class="ticket" src="./../../assets/image/ticket.svg">
+        <span>Ticket</span>
+        <img class="use" src="./../../assets/image/arrow_right_slim.svg">
+      </div>
+      <div class="option" (click)="setProvider('SPOTIFY_REMOTE')">
+        <img src="https://pre14.deviantart.net/5e2b/th/pre/f/2015/245/9/b/new_spotify_icon_by_mattroxzworld-d98301o.png">
+        <span>Spotify - Remote Controll</span>
+        <img class="use" src="./../../assets/image/arrow_right_slim.svg">
+      </div>
+      <!-- <div class="option" (click)="setProvider('SPOTIFY_LOCAL')">
+        <img src="https://pre14.deviantart.net/5e2b/th/pre/f/2015/245/9/b/new_spotify_icon_by_mattroxzworld-d98301o.png">
+        <span>Spotify - Local Playback</span>
+        <img class="use" src="./../../assets/image/arrow_right_slim.svg">
+      </div>
+      <div class="option" (click)="setProvider('NAPSTER')">
+        <img src="https://lh3.googleusercontent.com/f-iSgzoVUjO0WuMeMIynO66-bxHTY6CIY4NMSZyltNSYm5ZDRKNXljPg8w_ZTu95Dw=w300">
+        <span>Napster</span>
+        <img class="use" src="./../../assets/image/arrow_right_slim.svg">
+      </div> -->
+  </div>
+
+  <div *ngIf="provider == 'TICKET'" [class.visible]="setupStep == 1" class="step ticket">
+    <input (input)="onTicketInput($event)" #token class="ticket" type="text" placeholder="Enter ticket here">
+    <button *ngIf="ticketValid" (click)="enterRoom()">Enter party</button>
+  </div>
+
+  <div *ngIf="provider == 'SPOTIFY_REMOTE'" [class.visible]="setupStep == 1" class="step spotify">
+    <span class="subtitle">Log into your Spotify account and you can start managing your party music!</span>
+    <button (click)="loginWithSpotify()">Login with Spotify</button>
+  </div>
+
+  <button class="back" (click)="setupStep = setupStep - 1" *ngIf="setupStep > 0"><img class="icon" src="./../../assets/image/arrow_right_slim.svg">Step back</button>
+
+</div>

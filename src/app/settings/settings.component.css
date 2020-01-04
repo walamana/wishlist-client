@@ -1,0 +1,119 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Product Sans";
+  src: url("assets/fonts/product_sans_regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Product Sans";
+  src: url(assets/fonts/product_sans_bold.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Product Sans";
+  src: url("assets/fonts/product_sans_italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Product Sans;
+  src: url(assets/fonts/product_sans_bold_italic.ttf);
+  font-weight: 500;
+  font-style: italic;
+}
+html,
+body {
+  margin: 0;
+  background-color: #000000;
+}
+body {
+  height: 100vh;
+  overflow-y: hidden;
+}
+* {
+  font-family: "Poppins";
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  scrollbar-color: #252525 black;
+  scrollbar-width: thin;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+}
+.icon svg {
+  fill: #ffffff;
+}
+button {
+  background: #1c4da8;
+  border: 0;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+button:hover {
+  background: #0f3272;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+.subtitle {
+  opacity: 0.5;
+}
+.border-bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+.flex-v-center {
+  justify-content: center;
+}
+:host {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 60px * 2);
+  height: calc(100% - 30px * 2 - 50px);
+  padding: 30px 60px;
+  overflow-y: auto;
+}
+.title h2 {
+  margin-bottom: 0;
+}
+.title .subtitle {
+  display: block;
+  margin-bottom: 20px;
+}
+.playlists {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  flex-direction: column;
+  overflow-y: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.playlists .playlist {
+  display: flex;
+  padding: 10px 20px;
+  transition: 100ms background;
+  cursor: pointer;
+}
+.playlists .playlist img {
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
+}
+.playlists .playlist .texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.8;
+}
+.playlists .playlist:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.playlists .playlist.selected {
+  background: rgba(43, 116, 252, 0.15);
+}

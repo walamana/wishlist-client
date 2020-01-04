@@ -1,0 +1,7 @@
+
+export enum MusicProviders{
+    TICKET = "TICKET",
+    SPOTIFY_REMOTE = "SPOTIFY_REMOTE",
+    SPOTIFY_LOCAL = "SPOTIFY_LOCAL",
+    NAPSTER = "NAPSTER"
+}

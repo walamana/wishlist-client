@@ -1,0 +1,14 @@
+
+
+<div class="bar">
+  <img src="./../../assets/image/clear.svg" class="icon clear" (click)="clearSearch()">
+  <input #search (input)="onSearchInput($event)" type="text" placeholder="Search for track">
+</div>
+
+<div class="items" data-simplebar>
+
+  <div class="item" *ngFor="let i of items" (click)="addToQueue(i)">
+    <img [src]="i.album.images[0].url">
+    <span class="name">{{i.name}} - {{i.artists[0].name}}</span>
+  </div>
+</div>

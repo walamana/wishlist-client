@@ -1,0 +1,14 @@
+<h1>Settings</h1>
+<div class="title">
+  <h2>Playlist</h2>
+  <span class="subtitle">Select a playlist to play tracks from after the wishlist is empty</span>
+</div>
+
+<div class="playlists">
+  <div class="playlist" *ngFor="let p of playlists; let i = index" (click)="playlistClicked(i)" [class.selected]="p.id == settings.playlist">
+    <img [src]="p.cover">
+    <div class="texts">
+      <span class="name">{{p.name}}</span>
+    </div>
+  </div>
+</div>

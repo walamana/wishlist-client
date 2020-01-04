@@ -1,1 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/product_sans_regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Product Sans";
+    src: url(./assets/fonts/product_sans_bold.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/product_sans_italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: Product Sans;
+    src: url(./assets/fonts/product_sans_bold_italic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+html, body{
+    margin: 0;
+
+    background-color: #000000;
+}
+
+body{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+*{
+    font-family: "Poppins";
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    
+    scrollbar-color: rgb(37, 37, 37) black;
+    scrollbar-width: thin;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    svg{
+        fill: #ffffff;
+    }
+}
+
+button{
+    background: #1c4da8;
+    border: 0;
+    padding: 10px 30px;
+    cursor: pointer;
+    &:hover{background: #0f3272;}
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.subtitle{
+    opacity: 0.5;
+}
+
+.border-bottom{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.flex-vertical{
+    display: flex;
+    flex-direction: column;
+}
+.flex-v-center{
+    justify-content: center;   
+}

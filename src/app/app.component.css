@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+.routerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.nav {
+  height: 50px;
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.103);
+  flex-shrink: 0;
+}
+.nav .item {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: 100ms background;
+  cursor: pointer;
+}
+.nav .item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.nav .item img {
+  height: 20px;
+  width: 20px;
+}
+.nav .item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+.notification {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  transition: 500s transform;
+  transform: translateY(100px);
+}
+.notification.visible {
+  transform: translateY(0);
+}
+.hasPremium {
+  padding: 20px 40px;
+  width: 100vw;
+  height: 80px;
+  text-align: center;
+  background: rgba(255, 0, 0, 0.212);
+}
+.hasPremium span {
+  color: #ffb1b1;
+}

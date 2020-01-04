@@ -1,0 +1,61 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 50px);
+  background: #000000;
+  position: relative;
+  z-index: 20;
+}
+.bar {
+  position: relative;
+}
+.bar input {
+  padding: 30px 60px;
+  width: calc(100% - 60px * 2);
+  border: 0;
+  font-size: 40px;
+  font-weight: 900;
+  font-family: "Raleway";
+  background: transparent;
+  position: relative;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+.bar input::placeholder {
+  color: #ffffff;
+}
+.bar .clear {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 10;
+}
+.items {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #181818 black;
+  scrollbar-width: thin;
+}
+.items .item {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  user-select: none;
+  cursor: pointer;
+  transition: 200ms all;
+}
+.items .item img {
+  height: 70px;
+  margin: 20px;
+}
+.items .item .name {
+  font-size: 25px;
+  opacity: 0.7;
+}
+.items .item:hover {
+  transform: scale(1.05);
+  background-color: #111111;
+}
